@@ -5,7 +5,7 @@ An interactive dashboard built with **Streamlit** to explore both **live weather
 The project demonstrates data collection, API integration, data visualization, and dashboard design.
 
 ## Features
-- Fetches **live weather data** by city name (temperature, humidity, wind speed, conditions).  
+- Fetches **live weather data** by city name (temperature, humidity, wind speed, conditions).
 - Displays **historical climate data** for North and South New Zealand (CSV input).  
 - Combines real-time and historical insights into a single dashboard.  
 - Built using Python, Streamlit, pandas, matplotlib, and OpenWeather API.  
