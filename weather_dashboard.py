@@ -2,6 +2,7 @@ import streamlit as st
 import requests
 import pandas as pd
 import matplotlib.pyplot as plt
+import os
 
 # Function to convert temperature from Kelvin to Celsius
 def kelvin_to_celsius(kelvin):
@@ -10,7 +11,7 @@ def kelvin_to_celsius(kelvin):
 # Function to fetch live weather data from OpenWeather API
 def get_weather_data(city_name):
     base_url = "http://api.openweathermap.org/data/2.5/weather?"
-    api_key = '1d7cc8bd9adbd6f3e45db1e16ef50561'
+    api_key = os.getenv("OPENWEATHER_API_KEY", "YOUR_API_KEY_HERE")
     url = f"{base_url}appid={api_key}&q={city_name}"
     response = requests.get(url)
     return response.json()
@@ -56,8 +57,8 @@ if city_name:
 st.subheader("New Zealand Historical Weather Data")
 
 # Hardcoded file paths for North and South New Zealand CSVs
-north_file = "/Users/bhashinimadhushani/Documents/Python Related/data for weather project/North New Zealand_Monthly_2002_2022.csv"
-south_file = "/Users/bhashinimadhushani/Documents/Python Related/data for weather project/South New Zealand_Monthly_2002_2022.csv"
+north_file = "data/North_NZ_2002_2022.csv"
+south_file = "data/South_NZ_2002_2022.csv"
 
 # Load the historical data
 north_data, south_data = load_historical_data(north_file, south_file)
