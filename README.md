@@ -13,7 +13,17 @@ The project demonstrates data collection, API integration, data visualization, a
 ## Tech Stack
 - **Python Libraries:** Streamlit, pandas, matplotlib, requests  
 - **API:** OpenWeather API (for live weather data)  
-- **Data:** Historical CSV files for North and South NZ (temperature, rainfall, etc.)  
+- **Data:** Historical CSV files for North and South NZ (temperature, rainfall, etc.)
+
+## API Key Setup
+This project uses the [OpenWeather API](https://openweathermap.org/api) for live weather data.
+
+1. Sign up at OpenWeather to get a free API key.  
+2. Create an environment variable on your system:  
+
+   **Mac/Linux (bash/zsh):**  
+   ```bash
+   export OPENWEATHER_API_KEY="your_api_key_here"
 
 ## Setup & Installation
 1. Clone this repository:
